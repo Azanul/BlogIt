@@ -26,7 +26,7 @@ runs:
       shell: bash
       uses: actions/checkout@v3
       with:
-        gh_token: {{ inputs.gh_token }}
+        gh_token: ${{ inputs.gh_token }}
 
     - name: Fetch Github Release Asset
       shell: bash
