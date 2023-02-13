@@ -39,7 +39,7 @@ runs:
       shell: bash
 
     - name: Run
-      run: ./blog_it --url {{ inputs.url }} --number-of-posts {{ inputs.max_number_of_posts }}
+      run: ./blog_it --url ${{ inputs.url }} --number-of-posts ${{ inputs.max_number_of_posts }}
       shell: bash
 
     - name: Commit and push if README changed
