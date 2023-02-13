@@ -19,8 +19,8 @@ jobs:
       
       - run: |
             ls
-            ls /target
-            ls /target/release
+            ls target
+            ls target/release
 
       - name: Release
         uses: softprops/action-gh-release@v1
