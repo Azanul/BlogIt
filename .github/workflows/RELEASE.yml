@@ -22,6 +22,4 @@ jobs:
         with:
           tag_name: 'test'
           prerelease: true
-          files: |
-              target/release/blog_it
-              action.yml
+          files: target/release/blog_it
