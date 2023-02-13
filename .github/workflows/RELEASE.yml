@@ -26,4 +26,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: 'test'
-          files: /target/release/blog_it
+          prerelease: true
+          files: target/release/blog_it
