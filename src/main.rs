@@ -15,12 +15,16 @@ struct Args {
     /// Number of times to greet
     #[arg(short, long, default_value_t = 5)]
     max_number_of_posts: u8,
+
+    #[arg(short, long)]
+    target_md: String
 }
 
 fn main() {
     let args = Args::parse();
     let url = args.url;
     let max_number_of_posts = args.max_number_of_posts;
+    let target_md = args.target_md;
 
     let client = Client::new();
     let response = client.get(url).send().unwrap();
@@ -47,10 +51,10 @@ fn main() {
     }
 
     let re = Regex::new(r"(?s)<!-- blogs starts -->.*<!-- blogs ends -->").unwrap();
-    let readme = std::fs::read_to_string("README.md").unwrap();
+    let readme = std::fs::read_to_string(target_md.clone()).unwrap();
     let new_readme = re.replace_all(
         &readme,
         &format!("<!-- blogs starts -->\n{}\n<!-- blogs ends -->", content),
     );
-    std::fs::write("README.md", new_readme.as_bytes()).unwrap();
+    std::fs::write(target_md, new_readme.as_bytes()).unwrap();
 }
