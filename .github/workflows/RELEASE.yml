@@ -16,11 +16,6 @@ jobs:
      
       - name: Build
         run: cargo build --bin blog_it --release --verbose
-      
-      - run: |
-            ls
-            ls target
-            ls target/release
 
       - name: Release
         uses: softprops/action-gh-release@v1
