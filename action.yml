@@ -31,7 +31,7 @@ runs:
       uses: dsaltares/fetch-gh-release-asset@1.1.0
       with:
         repo: "Azanul/BlogIt"
-        version: 'tags/test5'
+        version: 'tags/test6'
         file: blog_it
       
     - name: Add permissions
