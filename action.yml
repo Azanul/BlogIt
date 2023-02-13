@@ -36,6 +36,7 @@ runs:
       
     - name: Add permissions
       run: chmod 777 blog_puller
+      shell: bash
 
     - name: Run
       run: ./blog_it --url {{ inputs.url }} --number-of-posts {{ inputs.max_number_of_posts }}
