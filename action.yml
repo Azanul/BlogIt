@@ -33,6 +33,9 @@ runs:
         repo: "Azanul/BlogIt"
         version: 'tags/test5'
         file: blog_it
+      
+    - name: Add permissions
+      run: chmod 777 blog_puller
 
     - name: Run
       run: ./blog_it --url {{ inputs.url }} --number-of-posts {{ inputs.max_number_of_posts }}
