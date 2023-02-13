@@ -1,0 +1,29 @@
+name: 'Blog It'
+author: 'Azanul Haque'
+description: 'Allows you to reflect your latest activity on any markdown file using RSS feed.'
+
+inputs:
+  url:
+    description: 'RSS url to fetch events from'
+    required: true
+
+  max_number_of_posts:
+    description: 'Max number of posts to fetch from the RSS feed'
+    default: 5
+
+  target_md:
+    description: 'Target .md file to update'
+    default: 'README.md'
+
+  gh_token:
+    description: 'GitHub access token with Repo scope'
+    default: ${{ github.token }}
+
+runs:
+  using: "composite"
+  steps:
+    - run: ./{{ github.action_path }}/target/release/blog_it --url {{ inputs.url }} --number-of-posts {{ inputs.max_number_of_posts }}
+
+branding:
+  icon: 'edit-3'
+  color: 'yellow'
