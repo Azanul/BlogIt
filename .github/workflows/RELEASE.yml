@@ -19,6 +19,6 @@ jobs:
       
       - name: Release
         uses: softprops/action-gh-release@v1
-        tag_name: 'test'
         with:
+          tag_name: 'test'
           files: target/release/blog_it
