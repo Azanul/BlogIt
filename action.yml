@@ -31,11 +31,11 @@ runs:
       uses: dsaltares/fetch-gh-release-asset@1.1.0
       with:
         repo: "Azanul/BlogIt"
-        version: 'tags/test7'
+        version: 'tags/test8'
         file: blog_it
       
     - name: Add permissions
-      run: chmod 777 blog_puller
+      run: chmod 777 blog_it
       shell: bash
 
     - name: Run
