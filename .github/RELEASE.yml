@@ -1,0 +1,23 @@
+name: Publish release to GitHub
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Version bump"]
+    branches: [master]
+    types:
+      - completed
+jobs:
+  version-bump:
+    name: Release to github releases
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+     
+      - name: Build
+        run: cargo build --bin blog_it --release --verbose
+      
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: target/release/blog_it
