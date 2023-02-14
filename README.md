@@ -19,7 +19,7 @@
     on:
       schedule: # Run workflow automatically
         - cron: '0 * * * *' # Runs every hour, on the hour
-      workflow_dispatch: # Run workflow manually (without waiting for the cron to be called), through the GitHub Actions Workflow page directly
+      workflow_dispatch: # Run workflow manually through the GitHub Actions Workflow page directly
     permissions:
       contents: write # To write the generated contents to the readme
     
@@ -66,10 +66,22 @@
 
 </details>
 
-### Examples 
+## Options
+
+This workflow has additional options that you can use to customize it for your use case. The following are the list of options available:
+
+| Option                       | Default Value                                                                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Required |
+|------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| `url` | `""` | RSS url to fetch events from, eg: `https://example1.com`| Yes |
+| `max_number_of_posts` | `5` | Max number of posts to fetch from the RSS feed| No |
+| `target_md` | `README.md` | Path to .md file to update| No |
+| `gh_token` | your GitHub token with repo scope | Use this to configure the token of the user that commits the workflow result to GitHub 
+
+
+## Examples 
 * [My own GitHub profile readme](https://github.com/Azanul) - [YML File](https://github.com/Azanul/Azanul/blob/master/.github/workflows/blog-it.yml)
 
-### ToDo
+## ToDo
 - [ ] Catch up with [Blog post workflow](https://github.com/gautamkrishnar/blog-post-workflow)
 
 ### 💡 Shoutout to [Gautam krishna R](https://github.com/gautamkrishnar) for creating [Blog post workflow](https://github.com/gautamkrishnar/blog-post-workflow), the inspiration for this action
