@@ -68,3 +68,8 @@
 
 ### Examples 
 * [My own GitHub profile readme](https://github.com/Azanul) - [YML File](https://github.com/Azanul/Azanul/blob/master/.github/workflows/blog-it.yml)
+
+### ToDo
+- [ ] Catch up with [Blog post workflow](https://github.com/gautamkrishnar/blog-post-workflow)
+
+### 💡 Shoutout to [Gautam krishna R](https://github.com/gautamkrishnar) for creating [Blog post workflow](https://github.com/gautamkrishnar/blog-post-workflow), the inspiration for this action
