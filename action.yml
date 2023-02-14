@@ -31,7 +31,7 @@ runs:
       uses: dsaltares/fetch-gh-release-asset@1.1.0
       with:
         repo: "Azanul/BlogIt"
-        version: 'tags/test12'
+        version: 'tags/test13'
         file: blog_it
       
     - name: Add permissions
@@ -39,7 +39,7 @@ runs:
       shell: bash
 
     - name: Run
-      run: ./blog_it --url ${{ inputs.url }} --max-number-of-posts ${{ inputs.max_number_of_posts }} --target_md ${{ inputs.target_md }}
+      run: ./blog_it --url ${{ inputs.url }} --max-number-of-posts ${{ inputs.max_number_of_posts }} --target-md ${{ inputs.target_md }}
       shell: bash
 
     - name: Commit and push if README changed
