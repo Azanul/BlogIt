@@ -31,7 +31,7 @@
           - name: Blog_It
             uses: Azanul/BlogIt@v1
             with:
-              url: https://blog.azanulhaque.tech/rss.xml
+              url: https://blog.azanulhaque.dev/rss.xml
     ```
 1. Replace the above URL list with your own RSS feed URLs. See [popular-sources](#popular-sources) for a list of common RSS feed urls.
 1. Commit and wait for it to run automatically, or you can also trigger it manually to see the result instantly.
